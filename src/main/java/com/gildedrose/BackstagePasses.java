@@ -2,7 +2,7 @@ package com.gildedrose;
 
 import static com.gildedrose.ItemTools.restrictQualityWithinBounds;
 
-public class BackstagePasses implements SpecialItem{
+public class BackstagePasses implements SpecialItem {
     private final Item item;
 
     public BackstagePasses(Item item) {

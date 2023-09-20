@@ -9,7 +9,7 @@ public class ItemFactory {
     private static final String AGED_BRIE = "Aged Brie";
     private static final String CONJURED = "Conjured Mana Cake";
 
-    private final Map<String, SpecialItem> itemMap= new HashMap<>();
+    private final Map<String, SpecialItem> itemMap = new HashMap<>();
 
     public ItemFactory(Item item) {
         itemMap.put(SULFURAS, new Sulfuras());

@@ -8,7 +8,6 @@ class GildedRose {
     }
 
     public void updateQuality() {
-
         for (Item item : items) {
             getSpecialItem(item).update();
         }
@@ -17,6 +16,4 @@ class GildedRose {
     private SpecialItem getSpecialItem(Item item) {
         return new ItemFactory(item).getItem(item);
     }
-
-
 }
