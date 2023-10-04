@@ -12,15 +12,28 @@ public class BackstagePasses implements SpecialItem {
     @Override
     public void update() {
         item.sellIn--;
-        if (item.sellIn < 0) {
+        if (isSellInNegative()) {
             item.quality = 0;
-        } else if (item.sellIn < 5) {
+        } else if (isSellInLessThanFive()) {
             item.quality += 3;
-        } else if (item.sellIn < 10) {
+        } else if (isSellInLessThanTen()) {
             item.quality += 2;
         } else {
             item.quality++;
         }
         item.quality = restrictQualityWithinBounds(item.quality);
     }
+
+    private boolean isSellInLessThanTen() {
+        return item.sellIn < 10;
+    }
+
+    private boolean isSellInLessThanFive() {
+        return item.sellIn < 5;
+    }
+
+    private boolean isSellInNegative() {
+        return item.sellIn < 0;
+    }
+
 }
